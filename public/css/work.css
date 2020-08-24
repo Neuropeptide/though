@@ -1,0 +1,26 @@
+.work-header {
+    position: sticky;
+    top: calc(var(--navbar-height));
+
+    background-color: var(--light);
+    padding-bottom: 16px;
+}
+
+.work-header img {
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.work-page p {
+
+    margin-bottom: 32px;
+}
+
+.intro {
+    color: var(--grey);
+    font-size: 24px;
+    line-height: 1.2;
+
+    margin: 0 80px;
+}

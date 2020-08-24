@@ -1,0 +1,70 @@
+.results-per-page {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+.results-per-page > * {
+    margin: 0 4px;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.results-per-page a,
+.pagination-container a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.results-per-page a:hover,
+.pagination-container a:hover {
+    text-decoration: underline;
+}
+
+.pagination-container > div {
+    margin: 16px 0;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.page-portfolio .pagination {
+    order: 2;
+}
+
+.page-portfolio .pagination-container > :nth-child(2) {
+    order: 3;
+}
+
+
+.pagination span,
+.pagination a {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 32px;
+    margin: 0 4px;
+
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.pagination .active,
+.pagination a:hover {
+    background-color: var(--ultra-light-grey);
+}
+
+.results-per-page .active,
+.pagination-container .active {
+    color: var(--secondary);
+    text-decoration: underline;
+}
+

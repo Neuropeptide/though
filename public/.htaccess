@@ -1,0 +1,24 @@
+RewriteEngine On
+
+# Dans ce fichier, on écrit de "jolies" URLs (réécriture d'URL)
+# RewriteRule <url> <action> (action peut etre un chargement de fichier php, une redirection, ...)
+
+
+# Si l'URL est exactement "portfolio", on charge le fichier portfolio.php
+RewriteRule ^portfolio$ portfolio.php
+
+# Si l'URL est exactement "projects", on charge également le fichier portfolio.php (attention au duplicate content !)
+RewriteRule ^projects$ portfolio.php
+
+RewriteRule ^what-we-do$ services.php
+
+RewriteRule ^about$ about-us.php
+
+RewriteRule ^contact$ contact.php
+
+# On veut une URL de la forme : "work-(un nombre entier)" => single.php?work=(ce nombre)
+# On capture avec les parenthèses un chiffre entre 1 et 9 suivi d'au maximum deux chiffres entre 0 et 9
+# et on l'injecte dans le script PHP en tant que variable GET (work=$1)
+RewriteRule ^work-([1-9][0-9]{0,})$ single.php?work=$1
+
+

@@ -1,0 +1,147 @@
+#services {
+  background: var(--dark-grey);
+  background: linear-gradient(90deg, var(--dark-grey) 50%, transparent 50%, transparent 100%);
+}
+
+.services-menu {
+
+  width: 50%;
+  padding: 40px 0 80px;
+  color: var(--light);
+}
+
+.services-menu nav {
+  margin-top: 40px;
+}
+
+.service-link {
+  
+  display: flex;
+  align-items: center;
+  height: 60px;
+  margin: 4px 0;
+
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--light-grey);
+
+  transition: font-size 0.1s ease;
+
+}
+
+.service-link.active,
+.service-link:hover {
+  position: relative;
+
+  color: var(--light);
+  font-size: 28px;
+}
+
+.service-link.active::after {
+  content: "";
+
+  display: block;
+  width: 20px;
+  height: 20px;
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+
+  transform: translate(50%, -50%) rotate(45deg);
+  background-color: var(--dark-grey);
+}
+
+.services-container { 
+
+  position: relative;
+  padding: 80px;
+  padding-right: 0;
+
+  width: 50%;
+  min-height: 600px;
+}
+
+.services-container .service {
+
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  opacity: 0;
+
+  transform: translateX(300px);
+
+  transition: opacity 0.3s ease, transform 0s linear 0.3s;
+}
+
+.services-container .service.active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 0.3s ease 0.4s;
+}
+
+.service-picto {
+  width: 100px;
+}
+
+.service-title {
+  font-size: 28px;
+  margin: 32px 0;
+}
+
+.service-content {
+  color: var(--grey);
+  line-height: 2;
+  margin-bottom: 16px;
+}
+
+
+
+.page-services .service {
+  display: flex;
+  align-items: flex-start;
+
+  /* Hack CSS pour gérer le bon positionement des ancres sans que le contenu ne soit masqué par la navbar */
+  padding-top: calc(var(--navbar-height) + 64px);
+  margin-top: calc(var(--navbar-height) * -1);
+}
+
+
+.page-services .service h3 {
+  display: inline-block;
+  margin-top: 0;
+}
+
+.page-services .service img {
+  width: 20%;
+  margin: 0 32px 0 0;
+}
+
+
+.page-services .service:nth-child(odd) {
+  text-align: right;
+}
+.page-services .service:nth-child(odd) img {
+  margin: 0 0 0 32px;
+  order: 2;
+}
+
+
+.projects-count {
+
+  color: var(--light);
+  background-color: var(--secondary);
+
+  padding: 4px 8px;
+  border-radius: 4px;
+
+  font-size: 12px;
+  margin-top: -8px;
+
+}
+
+.projects-service {
+  color: var(--secondary);
+  font-size: 12px;
+
+}

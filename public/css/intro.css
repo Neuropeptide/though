@@ -1,0 +1,48 @@
+.intro-block {
+  height: 640px;
+  background-color: #eee;
+
+  position: relative;
+}
+
+.intro-block::before {
+  content: '';
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background-color: var(--dark-grey);
+
+  opacity: 0.8;
+
+  transition: opacity 0.3s ease;
+}
+
+.intro-block:hover::before {
+  opacity: 0.2;
+}
+
+.intro-block img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.intro-block p {
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  padding: 16px;
+
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 24px;
+}

@@ -1,0 +1,66 @@
+#plans {
+  background-color: var(--ultra-light-grey);
+  padding: 80px 0;
+}
+
+.plan {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 32px;
+  padding-top: 160px;
+  
+  text-align: center;
+  
+  background-color: var(--light);
+  background-image: url(./../img/skyline.svg);
+  background-repeat: no-repeat;
+  background-position: center 32px; 
+  background-size: 100px;
+ 
+  /* 
+  En raccourci :
+  
+  background: var(--light) url(./../img/skyline.svg) no-repeat center 32px / 100px; 
+  */
+}
+
+.plan + .plan {
+  margin-left: 16px;
+}
+
+.plan h4 {
+  font-weight: bold;
+  margin-bottom: 32px;
+  font-size: 30px;
+}
+
+.plan h4 + p {
+  flex: 1;
+}
+
+.plan p {
+  color : var(--grey);
+  line-height: 2;
+}
+
+
+.plan p:last-child {
+  color : var(--secondary);
+  margin-top: 12px;
+
+  text-transform: capitalize;
+}
+
+.plan .plan-price {
+  color: var(--light-grey);
+  margin: 30px 0 40px;
+}
+
+.plan-price span {
+  color : var(--grey);
+  font-weight: bold;
+  font-size: 30px;
+}

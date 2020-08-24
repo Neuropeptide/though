@@ -1,0 +1,45 @@
+footer {
+  background-color: var(--ultra-dark-grey);
+  padding: 80px;
+
+  text-align: center;
+  color: var(--grey);
+
+  margin-top: 32px;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+}
+
+.social-link {
+
+  display: flex;
+  width: 60px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  
+  margin: 0 8px;
+
+  border-radius: 50%;
+  background-color: var(--dark-grey);
+  
+  
+}
+
+.contact-us {
+  margin: 32px 0 60px;
+  text-transform: uppercase;
+}
+
+.contact-us,
+.contact-us a {
+  color: var(--light);
+  line-height: 3;
+}
+
+.contact-us a { 
+  text-transform: lowercase;
+}

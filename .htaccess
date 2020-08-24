@@ -1,0 +1,4 @@
+RewriteEngine On
+
+# transfere toutes les requetes vers le dossier public
+RewriteRule ^((?!public/).*)$ public/$1 [L,NC]

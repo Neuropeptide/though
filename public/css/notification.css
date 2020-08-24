@@ -1,0 +1,19 @@
+.alert {
+    position: fixed;
+    z-index: 5;
+
+    bottom: 20px;
+    right: 20px;
+
+    color: var(--light);
+
+    padding: 32px;
+}
+
+.alert-danger {
+    background-color: var(--error);
+}
+
+.alert-success {
+    background-color: var(--success);
+}

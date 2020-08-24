@@ -1,0 +1,35 @@
+.contact-page p {
+    margin: 32px 0;
+}
+
+.form {
+    max-width: 400px;
+}
+
+.form-group {
+    margin-bottom: 32px;
+}
+
+
+.form-group label,
+.form-group button,
+.form-group .form-input {
+    display: block;
+    margin: 8px 0;
+}
+
+.form-group .form-input {
+
+    border: solid 1px var(--light-grey);
+    border-radius: 4px;
+    padding: 8px;
+
+    width: 100%;
+    font-size: 14px;
+}
+
+.form button {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+}

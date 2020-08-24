@@ -1,0 +1,151 @@
+#site-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: var(--navbar-height);
+  
+  z-index: 2;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--light);
+
+
+  backdrop-filter: blur(5px);
+  border-bottom: solid 1px var(--dark-grey);
+
+  background-color: var(--dark-grey);
+}
+
+#site-navbar > div {
+
+  width: 100px;
+
+  display: flex;
+  justify-content: center;
+}
+
+
+/* -----------------------------------------------------------------------------
+/* Hamburger
+/* -------------------------------------------------------------------------- */
+
+
+.hamburger {
+  position: relative;
+
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hamburger div {
+  width: 40px;
+  height: 4px;
+
+  margin: 4px;
+
+  background-color: var(--light);
+}
+
+.hamburger div:first-child,
+.hamburger div:last-child {
+  transition: transform 0.3s ease;
+}
+
+
+
+/* Ces sélecteurs sont vraiment trop complexes !!! */
+
+#menu-toggle-checkbox:checked ~ div .hamburger div:nth-child(1),
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 3px);
+}
+
+#menu-toggle-checkbox:checked ~ div .hamburger div:nth-child(2),
+.hamburger.open div:nth-child(2) {
+
+  position: absolute;
+  border: solid 4px;
+  background: none;
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#menu-toggle-checkbox:checked ~ div .hamburger div:nth-child(3),
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, 1px);
+}
+
+/* -----------------------------------------------------------------------------
+/* Menu
+/* -------------------------------------------------------------------------- */
+
+#menu {
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  height: 100vh;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: var(--ultra-dark-grey);
+  background-image: url(./../img/image_4.jpg);
+  background-repeat: no-repeat;
+  background-size: 33% 100%;
+
+  transition: all 0.3s ease;
+
+  transform: scale(0);
+  opacity: 0;
+}
+
+#menu-toggle-checkbox {
+  display: none;
+}
+
+#menu-toggle-checkbox:checked ~ #menu,
+#menu.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#menu-toggle {
+  position: relative;
+  z-index: 4;
+}
+
+
+#menu a {
+  display: block;
+
+  padding: 16px;
+
+  color: var(--light);
+  font-size: 20px;
+}
+
+#menu a.active {
+  color: var(--secondary);
+  text-decoration: underline;
+}

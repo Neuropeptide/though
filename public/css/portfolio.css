@@ -1,0 +1,104 @@
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(12, 1fr);
+  /*grid-template-rows: repeat(120, 70px);*/
+  grid-auto-rows: 70px;
+
+  grid-gap: 20px;
+  margin: 40px 0;
+}
+
+.grid > :nth-child(9n + 1) {
+  grid-column: 1 / 5; 
+  grid-row: span 2;
+}
+
+.grid > article:nth-child(9n + 2) {
+  grid-column: 5 / 13;
+  grid-row: span 5;
+}
+
+.grid > article:nth-child(9n + 3) {
+  grid-column: 1 / 5; 
+  grid-row: span 5;
+}
+
+.grid > article:nth-child(9n + 4) {
+  grid-column: 5 / 9;
+  grid-row: span 3;
+}
+
+.grid > article:nth-child(9n + 5) {
+  grid-column: 9 / 13;
+  grid-row: span 3;
+}
+
+.grid > article:nth-child(9n + 6) {
+  grid-column: 1 / 5;
+  grid-row: span 2;
+}
+
+.grid > article:nth-child(9n + 7) {
+  grid-column: 5 / 10;
+  grid-row: span 3;
+}
+
+.grid > article:nth-child(9n + 8) {
+  grid-column: 10 / 13;
+  grid-row: span 3;
+}
+
+.grid > article:nth-child(9n + 9) {
+  grid-column: 1 / 5;
+  grid-row: span 2;
+}
+
+
+
+.grid > * {
+  overflow: hidden;
+  position: relative;
+}
+
+.grid img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease;
+  transform: scale(1.2);
+}
+
+
+.grid > article div {
+  opacity: 0;
+
+  position: absolute;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+
+  font-size: 20px;
+  padding: 16px;
+  background-color: var(--hover);
+
+  transition: all 0.3s ease;
+}
+
+.grid > article a {
+  color: var(--light);
+}
+
+.grid > article:hover div {
+  opacity: 1;
+}
+
+.grid > article:hover img {
+  transform: scale(1);
+}
